@@ -1,6 +1,60 @@
-[gd_scene load_steps=2 format=3 uid="uid://c48nmall68pjm"]
+[gd_scene load_steps=10 format=3 uid="uid://c48nmall68pjm"]
 
 [ext_resource type="Script" path="res://mood_bar.gd" id="1_7vy52"]
+[ext_resource type="Texture2D" uid="uid://o2p7ql8u3xe4" path="res://art/happinessbar/Happinessbarinside.png" id="2_sxnq4"]
+[ext_resource type="Texture2D" uid="uid://drcltuvvkv8pj" path="res://art/happinessbar/Happiness Bar.png" id="2_xh1mt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3vdj"]
+atlas = ExtResource("2_sxnq4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vloho"]
+atlas = ExtResource("2_sxnq4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16htc"]
+atlas = ExtResource("2_sxnq4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aguj0"]
+atlas = ExtResource("2_sxnq4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtn2d"]
+atlas = ExtResource("2_xh1mt")
+region = Rect2(0, 0, 128, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqhxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3vdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vloho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16htc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aguj0")
+}],
+"loop": true,
+"name": &"inside",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtn2d")
+}],
+"loop": true,
+"name": &"outside",
+"speed": 5.0
+}]
 
 [node name="MoodBar" type="AnimatedSprite2D"]
 script = ExtResource("1_7vy52")
+
+[node name="MoodBar" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oqhxc")
+animation = &"inside"
