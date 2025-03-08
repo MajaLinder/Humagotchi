@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbtkjsogueku7"]
+
+[ext_resource type="Texture2D" uid="uid://1kdrbj6ynh6y" path="res://art/mouse/Mouse toy.png" id="1_epw8r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ongs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_epw8r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mouse" type="AnimatedSprite2D"]
+
+[node name="mouse" type="AnimatedSprite2D" parent="."]
+position = Vector2(511, 212)
+scale = Vector2(2.125, 2.1875)
+sprite_frames = SubResource("SpriteFrames_1ongs")

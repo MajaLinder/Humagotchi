@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl1wmrh650acj"]
+
+[ext_resource type="Texture2D" uid="uid://bn3r0q6ll1pi2" path="res://art/fish/StinkyFish.png" id="1_yfk4w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58s1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yfk4w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fish" type="AnimatedSprite2D"]
+position = Vector2(33.5, 31)
+scale = Vector2(3.09375, 2.9375)
+
+[node name="fish" type="AnimatedSprite2D" parent="."]
+position = Vector2(168.566, 70.8085)
+sprite_frames = SubResource("SpriteFrames_58s1k")

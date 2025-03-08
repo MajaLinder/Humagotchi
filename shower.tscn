@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dows4yo5epdwm"]
+
+[ext_resource type="Texture2D" uid="uid://t7k8ame58gcw" path="res://art/shower/Shower Head.png" id="1_7oql7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vo0cg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7oql7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="shower" type="AnimatedSprite2D"]
+
+[node name="shower" type="AnimatedSprite2D" parent="."]
+position = Vector2(166, 85)
+scale = Vector2(3.6875, 4.1875)
+sprite_frames = SubResource("SpriteFrames_vo0cg")

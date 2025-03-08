@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://di5i4jcana03h"]
+
+[ext_resource type="Texture2D" uid="uid://dy4ht4dw6i3dg" path="res://art/background/Tamagotchi.png" id="1_8r1cm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fdyoa"]
+radius = 48.5077
+
+[node name="Tamagochi" type="TileMapLayer"]
+
+[node name="Button" type="Sprite2D" parent="."]
+
+[node name="Tamagotchi" type="Sprite2D" parent="."]
+position = Vector2(542, 320)
+scale = Vector2(0.338729, 0.282824)
+texture = ExtResource("1_8r1cm")
+
+[node name="ButtonQuestion" type="CollisionShape2D" parent="."]
+position = Vector2(703, 502)
+shape = SubResource("CircleShape2D_fdyoa")
+
+[node name="ButtonHeart" type="CollisionShape2D" parent="."]
+position = Vector2(540, 502)
+shape = SubResource("CircleShape2D_fdyoa")
+
+[node name="ButtonArrow" type="CollisionShape2D" parent="."]
+position = Vector2(384, 496)
+shape = SubResource("CircleShape2D_fdyoa")
