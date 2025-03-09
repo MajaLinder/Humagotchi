@@ -1,23 +1,44 @@
-[gd_scene load_steps=10 format=3 uid="uid://c48nmall68pjm"]
+[gd_scene load_steps=19 format=3 uid="uid://c48nmall68pjm"]
 
 [ext_resource type="Script" path="res://mood_bar.gd" id="1_7vy52"]
-[ext_resource type="Texture2D" uid="uid://o2p7ql8u3xe4" path="res://art/happinessbar/Happinessbarinside.png" id="2_sxnq4"]
+[ext_resource type="Texture2D" uid="uid://bbqypxse1gb3g" path="res://art/happinessbar/Happinessbarinside.png" id="2_sxnq4"]
 [ext_resource type="Texture2D" uid="uid://drcltuvvkv8pj" path="res://art/happinessbar/Happiness Bar.png" id="2_xh1mt"]
+[ext_resource type="Texture2D" uid="uid://o2p7ql8u3xe4" path="res://art/dude/Happinessbarinside.png" id="3_oa3ur"]
+[ext_resource type="Texture2D" uid="uid://gf0bfygyj2i7" path="res://art/happinessbar/happiness_slice_1.png" id="5_rjcid"]
+[ext_resource type="Texture2D" uid="uid://cj13vyvhqbk3l" path="res://art/happinessbar/happiness_slice_2.png" id="6_5a1wf"]
+[ext_resource type="Texture2D" uid="uid://o6yd3xdqxvpw" path="res://art/happinessbar/happiness_slice_3.png" id="7_y5fl5"]
+[ext_resource type="Texture2D" uid="uid://br8jwtcboq24w" path="res://art/happinessbar/happiness_slice_4.png" id="8_3e1q0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l3vdj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mmo0"]
 atlas = ExtResource("2_sxnq4")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vloho"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyklq"]
 atlas = ExtResource("2_sxnq4")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_16htc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vuph"]
 atlas = ExtResource("2_sxnq4")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aguj0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn4qa"]
 atlas = ExtResource("2_sxnq4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3vdj"]
+atlas = ExtResource("3_oa3ur")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vloho"]
+atlas = ExtResource("3_oa3ur")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16htc"]
+atlas = ExtResource("3_oa3ur")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aguj0"]
+atlas = ExtResource("3_oa3ur")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtn2d"]
@@ -26,6 +47,38 @@ region = Rect2(0, 0, 128, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oqhxc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mmo0")
+}],
+"loop": true,
+"name": &"happiness1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyklq")
+}],
+"loop": true,
+"name": &"happiness2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vuph")
+}],
+"loop": true,
+"name": &"happiness3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn4qa")
+}],
+"loop": true,
+"name": &"happiness4",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l3vdj")
@@ -52,9 +105,38 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MoodBar" type="AnimatedSprite2D"]
+[node name="MoodBar" type="Area2D" node_paths=PackedStringArray("happiness_sprites")]
+position = Vector2(67, 34)
 script = ExtResource("1_7vy52")
+happiness_sprites = [NodePath("Happiness1"), NodePath("Happiness2"), NodePath("Happiness3"), NodePath("Happiness4")]
 
-[node name="MoodBar" type="AnimatedSprite2D" parent="."]
+[node name="Outside" type="AnimatedSprite2D" parent="."]
+position = Vector2(39.25, 9.25006)
+scale = Vector2(5.10547, 6.26562)
 sprite_frames = SubResource("SpriteFrames_oqhxc")
-animation = &"inside"
+animation = &"outside"
+metadata/_edit_group_ = true
+
+[node name="Happiness1" type="Sprite2D" parent="."]
+position = Vector2(-204, 7)
+scale = Vector2(7.8125, 5.5625)
+texture = ExtResource("5_rjcid")
+metadata/_edit_group_ = true
+
+[node name="Happiness2" type="Sprite2D" parent="."]
+position = Vector2(-17.9999, 5.00012)
+scale = Vector2(3.8125, 4.71875)
+texture = ExtResource("6_5a1wf")
+metadata/_edit_group_ = true
+
+[node name="Happiness3" type="Sprite2D" parent="."]
+position = Vector2(101, 5)
+scale = Vector2(3.83594, 5.23047)
+texture = ExtResource("7_y5fl5")
+metadata/_edit_group_ = true
+
+[node name="Happiness4" type="Sprite2D" parent="."]
+position = Vector2(279, 4)
+scale = Vector2(7.375, 4.64063)
+texture = ExtResource("8_3e1q0")
+metadata/_edit_group_ = true

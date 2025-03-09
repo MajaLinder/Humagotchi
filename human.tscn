@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c3lvv4ha01gib"]
+[gd_scene load_steps=57 format=3 uid="uid://c3lvv4ha01gib"]
 
 [ext_resource type="Script" path="res://human.gd" id="1_frb5p"]
 [ext_resource type="Texture2D" uid="uid://ddj38xs5yexd0" path="res://art/dude/Dude is sad.png" id="2_0k5tf"]
@@ -223,7 +223,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nhulu")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {
@@ -368,12 +368,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Human" type="AnimatedSprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7wc5"]
+
+[node name="Human" type="Area2D"]
 script = ExtResource("1_frb5p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(413, 224)
 scale = Vector2(3.78125, 4.1875)
 sprite_frames = SubResource("SpriteFrames_kwwp1")
-animation = &"mousedance"
-frame_progress = 0.865241
+animation = &"death"
+frame = 9
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_u7wc5")

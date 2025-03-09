@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5rkld4x22cqn"]
+[gd_scene load_steps=5 format=3 uid="uid://b5rkld4x22cqn"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_fq7ok"]
 [ext_resource type="PackedScene" uid="uid://gnv5gyhaycl2" path="res://paw.tscn" id="2_10pj4"]
 [ext_resource type="PackedScene" uid="uid://di5i4jcana03h" path="res://tamagochi.tscn" id="3_b0pss"]
+[ext_resource type="PackedScene" uid="uid://c3lvv4ha01gib" path="res://human.tscn" id="3_ddsm2"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_fq7ok")
 
 [node name="Tamagochi" parent="." instance=ExtResource("3_b0pss")]
 
+[node name="Human" parent="." instance=ExtResource("3_ddsm2")]
+position = Vector2(131, 47)
+
 [node name="Paw" parent="." instance=ExtResource("2_10pj4")]
+position = Vector2(83, 198)

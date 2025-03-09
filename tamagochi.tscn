@@ -1,18 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://di5i4jcana03h"]
+[gd_scene load_steps=8 format=3 uid="uid://di5i4jcana03h"]
 
-[ext_resource type="Texture2D" uid="uid://dy4ht4dw6i3dg" path="res://art/background/Tamagotchi.png" id="1_8r1cm"]
+[ext_resource type="Script" path="res://tamagochi.gd" id="1_w3ktg"]
+[ext_resource type="Texture2D" uid="uid://dt2pch46w1g4a" path="res://art/background/BG IMAGE.png" id="2_d3rdv"]
+[ext_resource type="PackedScene" uid="uid://c48nmall68pjm" path="res://mood_bar.tscn" id="3_nbcfw"]
+[ext_resource type="Texture2D" uid="uid://fnbau10etouf" path="res://art/background/Humagooooch.png" id="3_vv2ll"]
+[ext_resource type="PackedScene" uid="uid://c3lvv4ha01gib" path="res://human.tscn" id="3_x1dbu"]
+[ext_resource type="PackedScene" uid="uid://gnv5gyhaycl2" path="res://paw.tscn" id="4_vhn81"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdyoa"]
 radius = 48.5077
 
-[node name="Tamagochi" type="TileMapLayer"]
+[node name="Tamagochi" type="Area2D"]
+script = ExtResource("1_w3ktg")
 
-[node name="Button" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(955, 535)
+texture = ExtResource("2_d3rdv")
 
-[node name="Tamagotchi" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="Sprite2D" parent="."]
 position = Vector2(542, 320)
 scale = Vector2(0.338729, 0.282824)
-texture = ExtResource("1_8r1cm")
+texture = ExtResource("3_vv2ll")
 
 [node name="ButtonQuestion" type="CollisionShape2D" parent="."]
 position = Vector2(703, 502)
@@ -25,3 +33,13 @@ shape = SubResource("CircleShape2D_fdyoa")
 [node name="ButtonArrow" type="CollisionShape2D" parent="."]
 position = Vector2(384, 496)
 shape = SubResource("CircleShape2D_fdyoa")
+
+[node name="MoodBar" parent="." instance=ExtResource("3_nbcfw")]
+position = Vector2(523, 386)
+scale = Vector2(0.4, 0.4)
+
+[node name="Human" parent="." instance=ExtResource("3_x1dbu")]
+position = Vector2(127, 20)
+
+[node name="Paw" parent="." instance=ExtResource("4_vhn81")]
+position = Vector2(681, 365)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbqypxse1gb3g"
-path="res://.godot/imported/Happinessbarinside.png-f84ed47d8755d44c70bf2496d94f749d.ctex"
+uid="uid://br8jwtcboq24w"
+path="res://.godot/imported/happiness_slice_4.png-220a11f12590aebc5d9c8c6bd365c42c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/happinessbar/Happinessbarinside.png"
-dest_files=["res://.godot/imported/Happinessbarinside.png-f84ed47d8755d44c70bf2496d94f749d.ctex"]
+source_file="res://art/happinessbar/happiness_slice_4.png"
+dest_files=["res://.godot/imported/happiness_slice_4.png-220a11f12590aebc5d9c8c6bd365c42c.ctex"]
 
 [params]
 
