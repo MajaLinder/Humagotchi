@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://di5i4jcana03h"]
+[gd_scene load_steps=9 format=3 uid="uid://di5i4jcana03h"]
 
-[ext_resource type="Script" path="res://tamagochi.gd" id="1_w3ktg"]
+[ext_resource type="Script" uid="uid://c3uqs0c61vecq" path="res://tamagochi.gd" id="1_w3ktg"]
 [ext_resource type="Texture2D" uid="uid://dt2pch46w1g4a" path="res://art/background/BG IMAGE.png" id="2_d3rdv"]
 [ext_resource type="PackedScene" uid="uid://c48nmall68pjm" path="res://mood_bar.tscn" id="3_nbcfw"]
 [ext_resource type="Texture2D" uid="uid://fnbau10etouf" path="res://art/background/Humagooooch.png" id="3_vv2ll"]
 [ext_resource type="PackedScene" uid="uid://c3lvv4ha01gib" path="res://human.tscn" id="3_x1dbu"]
 [ext_resource type="PackedScene" uid="uid://gnv5gyhaycl2" path="res://paw.tscn" id="4_vhn81"]
+[ext_resource type="AudioStream" uid="uid://c11arnp6btcmi" path="res://art/Music/Meow.mp3" id="7_nk7wa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fdyoa"]
 radius = 48.5077
@@ -43,3 +44,8 @@ position = Vector2(127, 20)
 
 [node name="Paw" parent="." instance=ExtResource("4_vhn81")]
 position = Vector2(681, 365)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_nk7wa")
+volume_db = -41.585
+autoplay = true

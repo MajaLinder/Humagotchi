@@ -1,12 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://b5rkld4x22cqn"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_fq7ok"]
-[ext_resource type="PackedScene" uid="uid://gnv5gyhaycl2" path="res://paw.tscn" id="2_10pj4"]
+[ext_resource type="Script" uid="uid://c3uqs0c61vecq" path="res://tamagochi.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://di5i4jcana03h" path="res://tamagochi.tscn" id="3_b0pss"]
+[ext_resource type="AudioStream" uid="uid://c11arnp6btcmi" path="res://art/Music/Meow.mp3" id="4_1bvp3"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_fq7ok")
+script = ExtResource("1_h2yge")
 
 [node name="Tamagochi" parent="." instance=ExtResource("3_b0pss")]
 
-[node name="Paw" parent="." instance=ExtResource("2_10pj4")]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1bvp3")
+volume_db = -33.73
+autoplay = true

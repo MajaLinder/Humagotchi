@@ -17,7 +17,7 @@ var happiness_timer: Timer
 func _ready():
 	# Set up the happiness timer
 	happiness_timer = Timer.new()
-	happiness_timer.wait_time = 3.0  # 1 second
+	happiness_timer.wait_time = 4.0
 	happiness_timer.autostart = true
 	happiness_timer.one_shot = false
 	add_child(happiness_timer)

@@ -10,9 +10,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-	#if Global.human.happiness <= 0:
-		#die()
+	
+	if Global.human.alive == false:
+		die()
+
+
 	
 func eat() -> void: 
 	play_animation("eat")
@@ -37,7 +39,9 @@ func show_mood(mood) -> void:
 		play_animation("idle")
 
 func die() -> void:
-	play_animation("death")
+	$AnimatedSprite2D.play("death")
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://game_over.tscn")
 	
 func play_animation(animation_name):
 	current_animation = animation_name

@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://c3lvv4ha01gib"]
 
-[ext_resource type="Script" path="res://human.gd" id="1_frb5p"]
+[ext_resource type="Script" uid="uid://cc1r32ty34bn3" path="res://human.gd" id="1_frb5p"]
 [ext_resource type="Texture2D" uid="uid://ddj38xs5yexd0" path="res://art/dude/Dude is sad.png" id="2_0k5tf"]
 [ext_resource type="Texture2D" uid="uid://7ohmdtoqblxe" path="res://art/dude/Death Sprite Sheet.png" id="2_fvb6w"]
 [ext_resource type="Texture2D" uid="uid://bj1a35148rwnb" path="res://art/dude/EATstinkyfish.png" id="3_yre3l"]

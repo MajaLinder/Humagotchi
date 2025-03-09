@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjpotyqyasl2u"
-path="res://.godot/imported/Happinessbarinside.png-7e2c5209b540abdd1d2d49f947d72fc4.ctex"
+uid="uid://cejgxji4yfyap"
+path="res://.godot/imported/Game over.png-f5304bce3d7aca3a843486ac01c2a621.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dude/Happinessbarinside.png"
-dest_files=["res://.godot/imported/Happinessbarinside.png-7e2c5209b540abdd1d2d49f947d72fc4.ctex"]
+source_file="res://art/Game over.png"
+dest_files=["res://.godot/imported/Game over.png-f5304bce3d7aca3a843486ac01c2a621.ctex"]
 
 [params]
 
